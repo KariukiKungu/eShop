@@ -1,0 +1,299 @@
+/* Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Font Faces - Plus Jakarta Sans */
+@font-face {
+    font-display: swap;
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 200;
+    src: url('../fonts/plus-jakarta-sans-v8-latin-200.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Plus Jakarta Sans';
+    font-style: italic;
+    font-weight: 200;
+    src: url('../fonts/plus-jakarta-sans-v8-latin-200italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/plus-jakarta-sans-v8-latin-300.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Plus Jakarta Sans';
+    font-style: italic;
+    font-weight: 300;
+    src: url('../fonts/plus-jakarta-sans-v8-latin-300italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/plus-jakarta-sans-v8-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Plus Jakarta Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../fonts/plus-jakarta-sans-v8-latin-italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/plus-jakarta-sans-v8-latin-500.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Plus Jakarta Sans';
+    font-style: italic;
+    font-weight: 500;
+    src: url('../fonts/plus-jakarta-sans-v8-latin-500italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/plus-jakarta-sans-v8-latin-600.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Plus Jakarta Sans';
+    font-style: italic;
+    font-weight: 600;
+    src: url('../fonts/plus-jakarta-sans-v8-latin-600italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/plus-jakarta-sans-v8-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Plus Jakarta Sans';
+    font-style: italic;
+    font-weight: 700;
+    src: url('../fonts/plus-jakarta-sans-v8-latin-700italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../fonts/plus-jakarta-sans-v8-latin-800.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Plus Jakarta Sans';
+    font-style: italic;
+    font-weight: 800;
+    src: url('../fonts/plus-jakarta-sans-v8-latin-800italic.woff2') format('woff2');
+}
+
+/* Custom Font Faces - Open Sans */
+@font-face {
+    font-display: swap;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/open-sans-v36-latin-300.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 300;
+    src: url('../fonts/open-sans-v36-latin-300italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/open-sans-v36-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../fonts/open-sans-v36-latin-italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/open-sans-v36-latin-500.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 500;
+    src: url('../fonts/open-sans-v36-latin-500italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/open-sans-v36-latin-600.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 600;
+    src: url('../fonts/open-sans-v36-latin-600italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/open-sans-v36-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 700;
+    src: url('../fonts/open-sans-v36-latin-700italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../fonts/open-sans-v36-latin-800.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 800;
+    src: url('../fonts/open-sans-v36-latin-800italic.woff2') format('woff2');
+}
+
+/* Custom Component Classes */
+@layer components {
+    .container {
+        @apply relative mx-auto max-w-10xl;
+    }
+
+    /* Button Components */
+    .btn {
+        @apply inline-flex items-center justify-center gap-1 border-none px-3 py-4 no-underline transition-colors;
+    }
+
+    .btn-primary {
+        @apply bg-black text-white hover:bg-gray-800;
+    }
+
+    .btn-secondary {
+        @apply border border-gray-600 bg-white text-black hover:bg-gray-100;
+    }
+
+    .btn-sm {
+        @apply px-2 py-1 text-sm;
+    }
+
+    .btn-lg {
+        @apply px-4 py-3 text-lg;
+    }
+
+    /* Link Styles */
+    .link {
+        @apply text-black underline hover:text-gray-700;
+    }
+
+    /* Form Controls */
+    .input {
+        @apply border border-gray-300 px-3 py-2 transition-colors hover:border-gray-400 focus:border-black focus:outline-none;
+    }
+
+    .input:invalid {
+        @apply border-red-500;
+    }
+
+    .input:valid {
+        @apply border-green-500;
+    }
+
+    /* Validation Messages */
+    .validation-message {
+        @apply text-sm text-red-600;
+    }
+
+    .validation-success {
+        @apply text-sm text-green-600;
+    }
+}
+
+/* Base Styles */
+@layer base {
+    body {
+        @apply font-sans;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-jakarta font-bold;
+    }
+
+    a {
+        @apply text-black hover:text-gray-700;
+    }
+}
+
+/* Focus Styles */
+h1:focus {
+    @apply outline-none;
+}
+
+/* Blazor Error Boundary */
+.blazor-error-boundary {
+    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iNDkiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIG92ZXJmbG93PSJ2aXNpYmxlIj48ZyBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0yOC4zMDIgMUMxMy45MDcgMSAyLjMgMTIuNTgxIDIuMyAyNy4wODZjMCA2LjE5IDIuNzA3IDEyLjAyMyA3LjAzIDEzLjMxOVYzNS4yN2MwIDIuOTEgMi4zNjEgNC41NTUgNC45NjggNC41NTVsMTIuMjE2LTKWMGM4LjQyNyAwIDEzLjk3Mi01LjU0NSAxMy45NzItMTMuOTcyVjEwLjAyMmMwLTEuNDkuNzQzLTIuODczIDEuODc3LTMuNjg2LjQzNi0uMzIuNzE2LS44ODguNzE2LTEuNTJhMS45NTYgMS45NTYgMCAwIDAtMS45NTYtMS45NTZIMTEuNzhjLTEuMDc3IDAtMi4wMTEuNDY4LTIuNjgzIDEuMjE0QTMuOTYzIDMuOTYzIDAgMCAwIDYuMzI0IDUuNDdIMTAuMDU3Yy43MS0xLjA5IDEuODgtMS43NjYgMy4yMjctMS43NjZoMjIuOTkzYTMuOTcyIDMuOTcyIDAgMCAxIDMuOTcyIDMuOTcydjEyLjk5YzAgMi4xODUtMS43OCA0LjAzNC00LjAwMyA0LjAzNGgtMzAuODZhNC4wODYgNC4wODYgMCAwIDEtNC4wNDUtNC4wNjV2LTIwLjhhMS45NTYgMS45NTYgMCAwIDAtMS45NTYtMS45NTZoLTEuOTU2YTEuOTU2IDEuOTU2IDAgMCAwLTEuOTU2IDEuOTU2djIwLjhhNC4wODYgNC4wODYgMCAwIDEtNC4wNDUtNC4wNjV2LTIwLjhhMS45NTYgMS45NTYgMCAwIDAtMS45NTYtMS45NTZIMS45NTZhMS45NTYgMS45NTYgMCAwIDAtMS45NTYgMS45NTZ2MjAuOGE0LjA4NiA0LjA4NiAwIDAgMS00LjA0NSA0LjA2NXptMzAuODYtMjAuOGExLjk1NiAxLjk1NiAwIDAgMC0xLjk1Ni0xLjk1NmgtMi45MzRhMS45NTYgMS45NTYgMCAwIDAtMS45NTYgMS45NTZ2My45MTJhMS45NTYgMS45NTYgMCAwIDAgMS45NTYgMS45NTZoMi45MzRhMS45NTYgMS45NTYgMCAwIDAgMS45NTYtMS45NTZ6bS04LjA0NiAwaS0xLjk1Ni0xLjk1NmgtMi45MzRhMS45NTYgMS45NTYgMCAwIDAtMS45NTYgMS45NTZ2My45MTJhMS45NTYgMS45NTYgMCAwIDAgMS45NTYgMS45NTZoMi45MzRhMS45NTYgMS45NTYgMCAwIDAgMS45NTYtMS45NTZ6IiBmaWxsPSIjRkY0NDQ0IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48L2c+PC9zdmc+) no-repeat 1rem/1.8rem 1.8rem, #f8d7da;
+    @apply border border-red-300 px-4 py-3 text-red-700;
+}
+
+.blazor-error-boundary::after {
+    content: "An error has occurred.";
+}
