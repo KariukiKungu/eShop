@@ -5,6 +5,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="/" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'ui-sans-serif', 'system-ui']
+                    }
+                }
+            }
+        };
+    </script>
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/app.css" />
     <link rel="stylesheet" href="WebApp.styles.css" />
@@ -12,7 +24,7 @@
     <HeadOutlet />
 </head>
 
-<body>
+<body class="bg-white text-slate-950 antialiased">
     <Routes />
     <script src="_framework/blazor.web.js"></script>
 </body>
