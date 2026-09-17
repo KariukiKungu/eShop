@@ -1,33 +1,39 @@
 ﻿@using Microsoft.AspNetCore.Components.Endpoints
 
-<div class="eshop-header @(IsCatalog? "home" : "")">
-    <div class="eshop-header-hero">
-        @{
-            var headerImage = IsCatalog ? "images/header-home.webp" : "images/header.webp";
-        }
-        <img role="presentation" src="@headerImage" />
+<div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="relative overflow-hidden rounded-b-3xl shadow-sm">
+        <img role="presentation" src="@(IsCatalog ? "images/header-home.webp" : "images/header.webp")" class="h-64 w-full object-cover sm:h-80 lg:h-[32rem]" />
     </div>
-    <div class="eshop-header-container">
-        <nav class="eshop-header-navbar">
-            <a class="logo logo-header" href="">
-                <img alt="AdventureWorks" src="images/logo-header.svg" class="logo logo-header" />
-            </a>
-            
-            <UserMenu />
-            <CartMenu />
-        </nav>
-        <div class="eshop-header-intro">
-            <h1><SectionOutlet SectionName="page-header-title" /></h1>
-            <p><SectionOutlet SectionName="page-header-subtitle" /></p>
+
+    <div class="pointer-events-none absolute inset-0">
+        <div class="mx-auto flex h-full max-w-7xl items-end px-4 pb-10 sm:px-6 lg:px-8">
+            <div class="max-w-2xl text-black">
+                <h1 class="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+                    <SectionOutlet SectionName="page-header-title" />
+                </h1>
+                <p class="mt-3 text-lg font-semibold sm:text-2xl">
+                    <SectionOutlet SectionName="page-header-subtitle" />
+                </p>
+            </div>
         </div>
     </div>
+
+    <nav class="absolute inset-x-0 top-0 z-10 mx-auto flex max-w-7xl items-center gap-4 px-4 pt-5 sm:px-6 lg:px-8">
+        <a class="mr-auto block w-28 sm:w-36" href="">
+            <img alt="AdventureWorks" src="images/logo-header.svg" class="h-auto w-full" />
+        </a>
+
+        <div class="flex items-center gap-3 text-sm font-medium text-slate-900">
+            <UserMenu />
+            <CartMenu />
+        </div>
+    </nav>
 </div>
 
 @code {
     [CascadingParameter]
     public HttpContext? HttpContext { get; set; }
 
-    // We can use Endpoint Metadata to determine the page currently being visited
     private Type? PageComponentType => HttpContext?.GetEndpoint()?.Metadata.OfType<ComponentTypeMetadata>().FirstOrDefault()?.Type;
     private bool IsCatalog => PageComponentType == typeof(Pages.Catalog.Catalog);
 }

@@ -7,20 +7,26 @@
 
 <AuthorizeView>
     <Authorized>
-        <h3>@context.User.Identity?.Name</h3>
-        <div class="dropdown-menu">
-            <span class="dropdown-button"><img role="presentation" src="icons/user.svg" /></span>
-            <div class="dropdown-content">
-                <a class="dropdown-item" href="user/orders">My orders</a>
-                <form class="dropdown-item" method="post" action="user/logout" @formname="logout" @onsubmit="LogOutAsync">
-                    <AntiforgeryToken />
-                    <button type="submit">Log out</button>
-                </form>
+        <div class="relative inline-flex items-center gap-3">
+            <h3 class="hidden text-sm font-medium text-slate-900 sm:block">@context.User.Identity?.Name</h3>
+            <div class="group relative">
+                <button type="button" class="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white p-2 transition hover:bg-slate-100" aria-label="User menu">
+                    <img role="presentation" src="icons/user.svg" class="h-5 w-5" />
+                </button>
+                <div class="absolute right-0 top-full z-20 mt-2 hidden w-44 rounded-lg border border-slate-200 bg-white p-2 shadow-lg group-hover:block group-focus-within:block">
+                    <a class="block rounded px-3 py-2 text-sm text-slate-700 hover:bg-slate-100" href="user/orders">My orders</a>
+                    <form method="post" action="user/logout" @formname="logout" @onsubmit="LogOutAsync" class="mt-1">
+                        <AntiforgeryToken />
+                        <button type="submit" class="w-full rounded px-3 py-2 text-left text-sm text-slate-700 hover:bg-slate-100">Log out</button>
+                    </form>
+                </div>
             </div>
         </div>
     </Authorized>
     <NotAuthorized>
-        <a aria-label="Sign in" href="@Pages.User.LogIn.Url(Nav)"><img role="presentation" src="icons/user.svg" /></a>
+        <a aria-label="Sign in" href="@Pages.User.LogIn.Url(Nav)" class="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white p-2 transition hover:bg-slate-100">
+            <img role="presentation" src="icons/user.svg" class="h-5 w-5" />
+        </a>
     </NotAuthorized>
 </AuthorizeView>
 

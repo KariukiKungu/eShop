@@ -1,14 +1,14 @@
 ﻿@using eShop.WebAppComponents.Item
 @inject IProductImageUrlProvider ProductImages
 
-<div class="catalog-item">
-    <a class="catalog-product" href="@ItemHelper.Url(Item)" data-enhance-nav="false">
-        <span class='catalog-product-image'>
-            <img alt="@Item.Name" src='@ProductImages.GetProductImageUrl(Item)' />
+<div class="group flex h-full w-full">
+    <a class="flex w-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg" href="@ItemHelper.Url(Item)" data-enhance-nav="false">
+        <span class="block overflow-hidden bg-slate-100">
+            <img alt="@Item.Name" src="@ProductImages.GetProductImageUrl(Item)" class="h-64 w-full object-cover transition duration-300 group-hover:scale-105" />
         </span>
-        <span class='catalog-product-content'>
-            <span class='name'>@Item.Name</span>
-            <span class='price'>$@Item.Price.ToString("0.00")</span>
+        <span class="flex flex-1 flex-col justify-between p-4">
+            <span class="text-lg font-semibold text-slate-900">@Item.Name</span>
+            <span class="mt-3 text-xl font-bold text-slate-900">$@Item.Price.ToString("0.00")</span>
         </span>
     </a>
 </div>

@@ -5,11 +5,13 @@
 @inject NavigationManager NavigationManager
 @implements IDisposable
 
-<a aria-label="cart" href="cart">
-    <img role="presentation" src="icons/cart.svg" />
+<a aria-label="cart" href="cart" class="relative inline-flex items-center justify-center rounded-full p-2 text-slate-900 transition hover:bg-slate-100">
+    <img role="presentation" src="icons/cart.svg" class="h-6 w-6" />
     @if (basketItems?.Count > 0)
     {
-        <span class="cart-badge">@TotalQuantity</span>
+        <span class="absolute -right-1 -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-black px-1 text-[10px] font-bold text-white">
+            @TotalQuantity
+        </span>
     }
 </a>
 
@@ -24,9 +26,6 @@
 
     protected override async Task OnInitializedAsync()
     {
-        // The basket contents may change during the lifetime of this component (e.g., when an item is
-        // added during the current request). If this EventCallback is invoked, it will cause this
-        // component to re-render with the updated data.
         basketStateSubscription = Basket.NotifyOnChange(
             EventCallback.Factory.Create(this, UpdateBasketItemsAsync));
 
