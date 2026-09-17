@@ -6,7 +6,7 @@
     "test": "tests"
   },
   "scripts": {
-    "build:css": "postcss src/WebApp/wwwroot/css/app.css -o src/WebApp/wwwroot/css/app.min.css"
+    "build:css": "postcss src/WebApp/wwwroot/css/app.css -o src/WebApp/wwwroot/css/app.min.css --no-map"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +17,7 @@
     "@types/node": "^20.11.25",
     "dotenv": "^16.4.5",
     "postcss": "^8.4.49",
+    "postcss-cli": "^11.0.1",
     "tailwindcss": "^4.1.11"
   }
 }

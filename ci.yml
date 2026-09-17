@@ -11,11 +11,11 @@ variables:
 
 resources:
   repositories:
-    # Repo: 1ESPipelineTemplates/1ESPipelineTemplates
     - repository: 1esPipelines
       type: git
-      name: 1ESPipelineTemplates/1ESPipelineTemplates
+      name: 1ESPipelines/1ESPipelines
       ref: refs/tags/release
+
 extends:
   template: v1/1ES.Unofficial.PipelineTemplate.yml@1esPipelines
   parameters:
@@ -26,7 +26,7 @@ extends:
         enabled: true
     pool:
       name: NetCore1ESPool-Svc-Internal
-      image: windows.vs2019.amd64
+      image: windows.vs2022.amd64
       os: windows
     stages:
       - stage: buildStage
@@ -41,5 +41,9 @@ extends:
               - task: UseDotNet@2
                 inputs:
                   useGlobalJson: true
+              - script: npm install --no-audit --no-fund
+                displayName: Install frontend dependencies
+              - script: npm run build:css
+                displayName: Build Tailwind CSS
               - script: dotnet build eShop.Web.slnf
                 displayName: Build Step
