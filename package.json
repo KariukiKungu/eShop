@@ -6,7 +6,9 @@
     "test": "tests"
   },
   "scripts": {
-    "build:css": "postcss src/WebApp/wwwroot/css/app.css -o src/WebApp/wwwroot/css/app.min.css --no-map"
+    "build:css": "postcss src/WebApp/wwwroot/css/app.css -o src/WebApp/wwwroot/css/app.min.css --no-map",
+    "start": "node scripts/start.mjs",
+    "start:apphost": "dotnet run --project src/eShop.AppHost/eShop.AppHost.csproj"
   },
   "keywords": [],
   "author": "",
